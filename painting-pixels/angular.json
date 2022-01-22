@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "42e4ed57-2360-464c-baf4-10abd1229919"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -14,24 +17,24 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "static",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/painting-pixels",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "index": "static/index.html",
+            "main": "static/main.ts",
+            "polyfills": "static/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "static/favicon.ico",
+              "static/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "static/styles.scss"
             ],
             "scripts": []
           },
@@ -51,8 +54,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "static/environments/environment.ts",
+                  "with": "static/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -89,19 +92,31 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "main": "static/test.ts",
+            "polyfills": "static/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "static/favicon.ico",
+              "static/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "static/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder",
+          "options": {
+            "tsconfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

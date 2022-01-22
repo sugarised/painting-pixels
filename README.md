@@ -1,2 +1,0 @@
-# painting-pixels
-Code test

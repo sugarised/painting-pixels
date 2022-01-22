@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PaintingPixels</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+  <noscript>
+    <style>
+      .warning {
+        background: #fff;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 100;
+      }
+
+      .warning__message {
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+        border-radius: 4px;
+        padding: 0 5%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 50%;
+        margin: 0 auto;
+        padding: 32px;
+      }
+
+    </style>
+    <div class="warning">
+      <p class="warning__message">You need to enable Javascript for this to work.</p>
+    </div>
+  </noscript>
+</body>
+</html>

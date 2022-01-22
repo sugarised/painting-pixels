@@ -1,0 +1,28 @@
+html {
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  background-color: #fff;
+  min-height: 100%;
+  word-wrap: break-word;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  pointer-events: none;
+}
